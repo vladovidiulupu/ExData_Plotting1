@@ -1,5 +1,5 @@
 source("downloadAndSubsetData.R")
-data <- downloadAndSubsetData()
+data <- downloadAndSubsetData(verbose = TRUE)
 
 png("plot1.png", width = 480, height = 480)
 with(data, hist(Global_active_power, col = "red", 
