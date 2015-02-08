@@ -1,9 +1,9 @@
 source("downloadAndSubsetData.R")
 data <- downloadAndSubsetData(verbose = TRUE)
 
-png("plot4.png", width = 480, height = 480)
+png("plot4.png", width = 480, height = 480, type = "cairo")
 
-par(mfcol = c(2, 2), pch = 20, lwd = 0.5)
+par(mfcol = c(2, 2))
 
 # plot at (1,1)
 with(data, {
@@ -44,8 +44,7 @@ with(data, {
 # plot at (2,2)
 with(data, {
     plot(DateTime, Global_reactive_power,
-                type = "o",
-                cex = 0.2,
+                type = "l",
                 xlab = "datetime",
                 ylab = "Global_reactive_power")
     })
